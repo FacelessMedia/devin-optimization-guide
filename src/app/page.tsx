@@ -110,11 +110,11 @@ export default function Home() {
                   <p className="text-zinc-600 dark:text-zinc-400">Four kinds. Only the first two have real settings:</p>
                   <div className="space-y-4">
                     <div className="bg-blue-50 dark:bg-blue-950/20 p-4 rounded-lg">
-                      <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">The packed backpack (Settings > Environment > Blueprints)</h3>
+                      <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">The packed backpack (Settings &gt; Environment &gt; Blueprints)</h3>
                       <p className="text-sm text-blue-800 dark:text-blue-200">Save a picture of the robot's room with all tools already set up. Every new job starts from that picture. No more paying for unpacking. This is the #1 setting to do.</p>
                     </div>
                     <div className="bg-green-50 dark:bg-green-950/20 p-4 rounded-lg">
-                      <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2">Sticky notes on the fridge (Settings > Knowledge)</h3>
+                      <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2">Sticky notes on the fridge (Settings &gt; Knowledge)</h3>
                       <p className="text-sm text-green-800 dark:text-green-200">Write down stuff you keep repeating: "tests run with npm test", "the login code lives in folder X". The robot reads the notes free at the start of every job. No more paying it to rediscover.</p>
                     </div>
                     <div>
@@ -137,7 +137,7 @@ export default function Home() {
                   <p className="text-zinc-600 dark:text-zinc-400">In Devin Desktop (Windsurf) there's a switch called Adaptive.</p>
                   <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
                     <li>Adaptive = a boss who looks at each chore and sends the cheap fast worker for easy stuff and the expensive genius only when truly needed.</li>
-                    <li>Turn it on: Settings > Models > Adaptive ON. Then stop thinking about models.</li>
+                    <li>Turn it on: Settings &gt; Models &gt; Adaptive ON. Then stop thinking about models.</li>
                     <li>If you ever pick by hand: SWE-1.6 Fast for normal work. The expensive ones (Claude/GPT) only when the cheap one already failed.</li>
                   </ul>
                   <p className="text-sm text-zinc-500 dark:text-zinc-500">(Devin's cloud sessions don't let you pick a model at all — there, your coins are saved by #2 and #4 instead.)</p>
@@ -150,7 +150,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
-                    <li><strong>Settings > Usage → session spending limit.</strong> A job can never eat more coins than the lid allows. Runaway robot = stopped automatically.</li>
+                    <li><strong>Settings &gt; Usage → session spending limit.</strong> A job can never eat more coins than the lid allows. Runaway robot = stopped automatically.</li>
                     <li><strong>Session Insights</strong> (click any finished job): shows how many coins it ate, writes a better prompt for you, and lists what was broken. Copy the better prompt. Fix what it says is broken. Free lesson after every job.</li>
                   </ul>
                 </CardContent>
@@ -238,7 +238,7 @@ export default function Home() {
                   <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
                     <li><strong>Sleeping = 0 usage.</strong> Devin auto-sleeps after ~0.1 ACU of inactivity. Don't babysit sessions.</li>
                     <li><strong>Windows sessions cost ~9% more</strong> than Linux. Use Linux unless you truly need Windows.</li>
-                    <li><strong>Session size targets:</strong> XS ≤ 2 ACUs, S ≤ 5 ACUs. Sessions flagged L (>10) or XL (>20 ACUs) are "unhealthy" — task was too big or Devin struggled. Aim for XS/S.</li>
+                    <li><strong>Session size targets:</strong> XS &le; 2 ACUs, S &le; 5 ACUs. Sessions flagged L (&gt;10) or XL (&gt;20 ACUs) are "unhealthy" — task was too big or Devin struggled. Aim for XS/S.</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -285,7 +285,7 @@ export default function Home() {
                   
                   <div>
                     <h3 className="font-semibold text-lg mb-2">a) Environment snapshots (biggest one — this is machine-level caching)</h3>
-                    <p className="text-zinc-600 dark:text-zinc-400 mb-2"><strong>Setting:</strong> Settings > Environment > Blueprints (declarative YAML — recommended over the classic wizard).</p>
+                    <p className="text-zinc-600 dark:text-zinc-400 mb-2"><strong>Setting:</strong> Settings &gt; Environment &gt; Blueprints (declarative YAML — recommended over the classic wizard).</p>
                     <ul className="list-disc list-inside space-y-1 text-zinc-600 dark:text-zinc-400">
                       <li>Every session boots from a pre-built snapshot with repos cloned + deps installed. No snapshot = you pay setup ACUs every single session.</li>
                       <li>initialize = one-time installs (runtimes, apt packages, global CLIs). maintenance = dep installs (npm install, pip install) — runs during builds, surfaced to the agent at session start.</li>
@@ -296,7 +296,7 @@ export default function Home() {
 
                   <div>
                     <h3 className="font-semibold text-lg mb-2">b) Knowledge (context caching)</h3>
-                    <p className="text-zinc-600 dark:text-zinc-400 mb-2"><strong>Setting:</strong> Settings > Knowledge. Pin entries to specific repos or globally.</p>
+                    <p className="text-zinc-600 dark:text-zinc-400 mb-2"><strong>Setting:</strong> Settings &gt; Knowledge. Pin entries to specific repos or globally.</p>
                     <ul className="list-disc list-inside space-y-1 text-zinc-600 dark:text-zinc-400">
                       <li>Anything you repeat in prompts belongs here: test commands, architecture facts, "our API is offset-paginated, util at src/utils/paginate.ts", common bugs + fixes, deploy steps.</li>
                       <li>Auto-loaded at session start → Devin skips paid re-exploration. Accept Devin's own Knowledge suggestions when they're good.</li>
@@ -378,15 +378,15 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-2">
                       <input type="checkbox" className="mt-1" />
-                      <span className="text-zinc-600 dark:text-zinc-400">Settings > Usage — set default session spending limits (hard cap on runaway sessions) + auto-reload threshold</span>
+                      <span className="text-zinc-600 dark:text-zinc-400">Settings &gt; Usage — set default session spending limits (hard cap on runaway sessions) + auto-reload threshold</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <input type="checkbox" className="mt-1" />
-                      <span className="text-zinc-600 dark:text-zinc-400">Settings > Environment > Blueprints — configure your main repos (initialize / maintenance / knowledge); verify the build passes</span>
+                      <span className="text-zinc-600 dark:text-zinc-400">Settings &gt; Environment &gt; Blueprints — configure your main repos (initialize / maintenance / knowledge); verify the build passes</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <input type="checkbox" className="mt-1" />
-                      <span className="text-zinc-600 dark:text-zinc-400">Settings > Knowledge — add: test/lint/build commands, key utilities + paths, architecture facts, common gotchas</span>
+                      <span className="text-zinc-600 dark:text-zinc-400">Settings &gt; Knowledge — add: test/lint/build commands, key utilities + paths, architecture facts, common gotchas</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <input type="checkbox" className="mt-1" />
@@ -394,7 +394,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-2">
                       <input type="checkbox" className="mt-1" />
-                      <span className="text-zinc-600 dark:text-zinc-400">Devin Desktop: Settings > Models — toggle Adaptive model router ON</span>
+                      <span className="text-zinc-600 dark:text-zinc-400">Devin Desktop: Settings &gt; Models — toggle Adaptive model router ON</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <input type="checkbox" className="mt-1" />
